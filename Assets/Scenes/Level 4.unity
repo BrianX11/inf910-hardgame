@@ -1648,10 +1648,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4989464986461611552, guid: 340c8f4e7f333664abcd6ad0deeeb003, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989464986461611552, guid: 340c8f4e7f333664abcd6ad0deeeb003, type: 3}
       propertyPath: deadsText
       value: 
       objectReference: {fileID: 1545013138}

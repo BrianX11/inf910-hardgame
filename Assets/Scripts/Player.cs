@@ -5,6 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float velocity = 30.0f;
+    public AudioSource audioSource;
+    public AudioSource clip;
+
+    private void Start()
+    {
+        clip = GetComponent<AudioSource>();
+    }
     void FixedUpdate()
     {
         float h = Input.GetAxisRaw("Horizontal") * velocity;
@@ -15,6 +22,7 @@ public class Player : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
+            clip.Play();
             GameManager.playerDeads += 1;
             GameManager.Instance.Respawn();
         }
