@@ -5,13 +5,9 @@ using UnityEngine;
 public class SafeArea : MonoBehaviour
 {
     public bool isEndOfLevel;
-    void Start()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("SafeArea") && isEndOfLevel)
+        if (other.gameObject.name == "Player" && isEndOfLevel)
         {
             Debug.Log("Termino");
         }

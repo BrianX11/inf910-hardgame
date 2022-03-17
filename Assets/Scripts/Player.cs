@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     {
         float h = Input.GetAxisRaw("Horizontal") * velocity;
         float v = Input.GetAxisRaw("Vertical" ) * velocity;
-        Debug.Log(h);
         GetComponent<Rigidbody2D>().velocity = new Vector2(h, v);
     }
 }
