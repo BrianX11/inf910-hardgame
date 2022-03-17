@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
+            GameManager.playerDeads += 1;
             GameManager.Instance.Respawn();
         }
     }

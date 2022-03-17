@@ -9,7 +9,7 @@ public class SafeArea : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && isEndOfLevel)
         {
-            Debug.Log("Termino");
+            GameManager.Instance.nextLevel();
         }
     }
 
