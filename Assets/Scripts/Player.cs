@@ -11,4 +11,11 @@ public class Player : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical" ) * velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(h, v);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            GameManager.Instance.Respawn();
+        }
+    }
 }

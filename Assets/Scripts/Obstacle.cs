@@ -6,7 +6,8 @@ public class Obstacle : MonoBehaviour
 {
     public enum _animation
     {
-        Triangle
+        Triangle,
+        Rotate
     }
 
     public enum _direction
@@ -42,6 +43,9 @@ public class Obstacle : MonoBehaviour
                     direction == _direction.Y ? tri : 0.0f,
                     0.0f
                     );
+                break;
+            case _animation.Rotate:
+                transform.Rotate(new Vector3(0, 0, 45) * Time.deltaTime * velocity * (invert ? -1f : 1f));
                 break;
         }
 
